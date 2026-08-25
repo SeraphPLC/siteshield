@@ -1,0 +1,5 @@
+Contact: https://github.com/SeraphPLC/siteshield/issues/new
+Policy: https://seraphplc.github.io/siteshield/security-methodology.html
+Preferred-Languages: en
+Canonical: https://seraphplc.github.io/siteshield/.well-known/security.txt
+Expires: 2027-08-25T00:00:00Z
