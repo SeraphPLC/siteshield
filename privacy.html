@@ -15,12 +15,13 @@
     <section class="hero">
       <p class="eyebrow">Privacy</p>
       <h1>Collect less. Keep evidence explicit.</h1>
-      <p class="lede">This public prototype does not include live customer accounts, payment processing, production credential storage, or unrestricted active scanning.</p>
+      <p class="lede">SiteShield uses hosted providers for website intake and subscription checkout while keeping production credentials, raw card data, and unrestricted active scanning out of the public site.</p>
     </section>
     <section class="section">
       <h2>Current data boundary</h2>
       <p>The public intake forms accept only the website URL, contact email, selected service interest, and optional notes that you choose to submit. Do not submit passwords, API keys, customer records, or other secrets. SiteShield self-monitoring remains bounded to its own explicitly authorized scope.</p>
-      <p>Form submissions are processed by our hosting provider for intake and follow-up. Submitting a form does not authorize active testing, credential use, exploitation, state changes, or access to non-public systems. Additional production-data handling requires a separate documented agreement.</p>
+      <p>Form submissions are processed by our hosting provider for intake and follow-up. Subscription checkout is processed by Stripe; SiteShield does not receive or store full card numbers or card security codes. Payment does not authorize active testing.</p>
+      <p>Submitting a form or purchasing a subscription does not authorize credential use, exploitation, state changes, or access to non-public systems. Additional production-data handling requires a separate documented agreement.</p>
     </section>
   </main>
   <footer><span>Seraph SiteShield</span><span>Public prototype privacy boundary</span><a href="./">Home</a></footer>

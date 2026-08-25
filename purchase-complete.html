@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="SiteShield subscription onboarding after Stripe checkout.">
+  <title>Start SiteShield onboarding</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav"><a class="brand" href="./">SERAPH <span>SITESHIELD</span></a><nav><a href="./">Home</a><a href="security-methodology.html">Methodology</a><a href="privacy.html">Privacy</a></nav></header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Subscription onboarding</p>
+      <h1>Let’s secure the right website.</h1>
+      <p class="lede">Stripe sent you here after checkout. Service activation begins after the successful subscription is confirmed in Stripe and we receive the website details below.</p>
+      <p class="boundary">Payment does not authorize active testing. Active testing still requires verified ownership, exact scope, and explicit authorization.</p>
+    </section>
+    <section class="section form-section">
+      <div class="form-intro">
+        <p class="eyebrow">Next step</p>
+        <h2>Tell us what to monitor.</h2>
+        <p>Use the same email address you used at checkout when possible so we can match your onboarding request to the Stripe subscription.</p>
+        <p class="fineprint">Do not submit passwords, API keys, customer records, or other secrets.</p>
+      </div>      <form class="site-form" name="paid-onboarding" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html">
+        <input type="hidden" name="form-name" value="paid-onboarding">
+        <p class="visually-hidden"><label>Leave this field empty <input name="bot-field" autocomplete="off"></label></p>
+        <label for="onboard-business">Business name</label>
+        <input id="onboard-business" name="business-name" type="text" required autocomplete="organization">
+        <label for="onboard-email">Checkout email</label>
+        <input id="onboard-email" name="contact-email" type="email" required autocomplete="email">
+        <label for="onboard-site">Website URL</label>
+        <input id="onboard-site" name="website-url" type="url" placeholder="https://example.com" required autocomplete="url">
+        <label for="onboard-plan">Plan purchased</label>
+        <select id="onboard-plan" name="plan" required><option value="">Select one</option><option>Business</option><option>Pro</option></select>
+        <label for="onboard-notes">Anything we should know? <span class="optional">Optional</span></label>
+        <textarea id="onboard-notes" name="notes" rows="4" placeholder="CMS, ecommerce platform, recent changes, or priorities"></textarea>
+        <label class="check-row"><input type="checkbox" name="authorized-onboarding" value="yes" required><span>I own, manage, or am authorized to enroll this website in SiteShield monitoring.</span></label>
+        <button class="button primary" type="submit">Start my onboarding</button>
+      </form>
+    </section>
+  </main>
+  <footer><span>Seraph SiteShield</span><span>Subscription onboarding</span><nav><a href="privacy.html">Privacy</a><a href="security-methodology.html">Methodology</a></nav></footer>
+</body>
+</html>
