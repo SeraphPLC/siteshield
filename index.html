@@ -11,11 +11,12 @@
 </head>
 <body>
   <header class="nav">
-    <a class="brand" href="./">SERAPH <span>SITESHIELD</span></a>
+    <a class="brand" href="./" aria-label="Seraph SiteShield home">SERAPH <span>SITESHIELD</span></a>
     <nav aria-label="Primary navigation">
+      <a href="#free-check">Free check</a>
       <a href="security-methodology.html">Methodology</a>
       <a href="#pricing">Pricing</a>
-      <a href="#agencies">For agencies</a>
+      <a href="#agencies">Agencies</a>
     </nav>
   </header>
   <main>
@@ -24,15 +25,16 @@
       <h1>Your website has a security team now.</h1>
       <p class="lede">SiteShield watches for security weaknesses, shows the evidence behind each finding, explains what matters, and verifies whether the issue is actually gone.</p>
       <div class="actions">
-        <a class="button primary" href="#launch">Check my website free</a>
+        <a class="button primary" href="#free-check">Check my website free</a>
         <a class="button secondary" href="security-methodology.html">See how it works</a>
       </div>
       <p class="boundary">Free checks are passive and non-intrusive. Deeper testing requires verified ownership, exact scope, and explicit scan authorization.</p>
     </section>
+
     <section class="proof-grid" aria-label="SiteShield principles">
-      <article><strong>Evidence first</strong><span>Every finding keeps its source, rule identity, confidence, and observed evidence.</span></article>
-      <article><strong>Fix what matters</strong><span>Findings are prioritized and translated into practical remediation guidance.</span></article>
-      <article><strong>Verify the repair</strong><span>A finding is not marked resolved merely because someone says it was fixed.</span></article>
+      <a class="proof-card" href="security-methodology.html#evidence"><strong>Evidence first</strong><span>Every finding keeps its source, rule identity, confidence, and observed evidence.</span><em>View evidence model →</em></a>
+      <a class="proof-card" href="security-methodology.html#lifecycle"><strong>Fix what matters</strong><span>Findings are prioritized and translated into practical remediation guidance.</span><em>View finding lifecycle →</em></a>
+      <a class="proof-card" href="security-methodology.html#verification"><strong>Verify the repair</strong><span>A finding is not marked resolved merely because someone says it was fixed.</span><em>View verification model →</em></a>
     </section>
 
     <section class="section" id="how-it-works">
@@ -46,38 +48,84 @@
       </ol>
     </section>
 
+    <section class="section form-section" id="free-check">
+      <div class="form-intro">
+        <p class="eyebrow">Free passive check</p>
+        <h2>Start with your public website.</h2>
+        <p>Send us the public website you want reviewed. This request does not authorize credential use, exploitation, state changes, or active testing.</p>
+        <p class="fineprint">Do not submit passwords, API keys, customer records, or other secrets.</p>
+      </div>
+      <form class="site-form" name="free-check" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html">
+        <input type="hidden" name="form-name" value="free-check">
+        <p class="visually-hidden"><label>Leave this field empty <input name="bot-field" autocomplete="off"></label></p>
+        <label for="website-url">Website URL</label>
+        <input id="website-url" name="website-url" type="url" placeholder="https://example.com" required autocomplete="url">
+        <label for="contact-email">Contact email</label>
+        <input id="contact-email" name="contact-email" type="email" placeholder="you@example.com" required autocomplete="email">
+        <label for="check-notes">Anything we should know? <span class="optional">Optional</span></label>
+        <textarea id="check-notes" name="notes" rows="4" placeholder="CMS, recent changes, or a specific concern"></textarea>
+        <label class="check-row"><input type="checkbox" name="authorized-request" value="yes" required><span>I own, manage, or am authorized to request a passive public check of this site.</span></label>
+        <button class="button primary" type="submit">Request my free check</button>
+      </form>
+    </section>
+
     <section class="section split" id="agencies">
       <div>
         <p class="eyebrow">For web agencies</p>
         <h2>Manage security without becoming a security company.</h2>
-        <p>SiteShield is designed to give agencies a clear per-site security view while keeping authorization provenance explicit for every client asset.</p>
+        <p>Give clients a clear per-site security view while keeping authorization provenance explicit for every asset.</p>
+        <a class="button secondary" href="#contact">Talk about agency monitoring</a>
       </div>
-      <div class="panel">
-        <p>Multi-site monitoring</p><p>Consolidated reporting</p><p>Evidence-backed remediation</p><p>Per-asset authorization</p>
-      </div>
+      <a class="panel panel-link" href="#contact" aria-label="Ask about SiteShield agency capabilities">
+        <p>Multi-site monitoring</p><p>Consolidated reporting</p><p>Evidence-backed remediation</p><p>Per-asset authorization</p><span>Ask about agency access →</span>
+      </a>
     </section>
+
     <section class="section" id="pricing">
       <p class="eyebrow">Launch pricing hypothesis</p>
       <h2>Simple pricing for small teams.</h2>
       <div class="pricing">
-        <article><span>Free Check</span><strong>$0</strong><p>Passive website security check and next-step guidance.</p></article>
-        <article class="featured"><span>Business</span><strong>$79<small>/mo</small></strong><p>Continuous monitoring, prioritized findings, remediation guidance, and verification.</p></article>
-        <article><span>Pro</span><strong>$149<small>/mo</small></strong><p>Higher-complexity sites, APIs, ecommerce, and expanded monitoring cadence.</p></article>
+        <article><span>Free Check</span><strong>$0</strong><p>Passive website security check and next-step guidance.</p><a class="button secondary" href="#free-check">Start free</a></article>
+        <article class="featured"><span>Business</span><strong>$79<small>/mo</small></strong><p>Continuous monitoring, prioritized findings, remediation guidance, and verification.</p><a class="button primary" href="#contact">Choose Business</a></article>
+        <article><span>Pro</span><strong>$149<small>/mo</small></strong><p>Higher-complexity sites, APIs, ecommerce, and expanded monitoring cadence.</p><a class="button secondary" href="#contact">Ask about Pro</a></article>
       </div>
       <p class="fineprint">Pricing shown here is a launch hypothesis, not a permanent offer or service guarantee.</p>
     </section>
 
-    <section class="section launch" id="launch">
+    <section class="section form-section" id="contact">
+      <div class="form-intro">
+        <p class="eyebrow">Business, Pro, and agency interest</p>
+        <h2>Tell us what you need monitored.</h2>
+        <p>Use this form for paid-plan or agency interest. No subscription or active scan is created by submitting it.</p>
+      </div>
+      <form class="site-form" name="product-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html">
+        <input type="hidden" name="form-name" value="product-interest">
+        <p class="visually-hidden"><label>Leave this field empty <input name="bot-field" autocomplete="off"></label></p>
+        <label for="interest-type">I am interested in</label>
+        <select id="interest-type" name="interest" required>
+          <option value="">Select one</option><option>Business</option><option>Pro</option><option>Agency / multi-site</option><option>One-time assessment</option>
+        </select>
+        <label for="business-email">Contact email</label>
+        <input id="business-email" name="contact-email" type="email" placeholder="you@example.com" required autocomplete="email">
+        <label for="business-site">Primary website <span class="optional">Optional</span></label>
+        <input id="business-site" name="website-url" type="url" placeholder="https://example.com" autocomplete="url">
+        <label for="business-notes">What do you need?</label>
+        <textarea id="business-notes" name="notes" rows="4" placeholder="Number of sites, platform, or what you want SiteShield to handle"></textarea>
+        <button class="button primary" type="submit">Send my request</button>
+      </form>
+    </section>
+
+    <section class="section launch" id="self-monitoring">
       <p class="eyebrow">Self-monitoring</p>
       <h2>We check SiteShield, too.</h2>
       <p>SiteShield includes self-monitoring of its own public surface as one source of operational evidence. Self-assessment is not independent certification or a guarantee of complete vulnerability coverage.</p>
-      <a class="button primary" href="security-methodology.html">Read the security methodology</a>
+      <a class="button secondary" href="security-methodology.html#verification">Read the verification methodology</a>
     </section>
   </main>
   <footer>
     <span>Seraph SiteShield</span>
     <span>Evidence-grounded website security monitoring</span>
-    <a href="privacy.html">Privacy</a>
+    <nav aria-label="Footer navigation"><a href="privacy.html">Privacy</a><a href="security-methodology.html">Methodology</a><a href="#contact">Contact</a></nav>
   </footer>
 </body>
 </html>
