@@ -82,35 +82,35 @@
     </section>
 
     <section class="section" id="pricing">
-      <p class="eyebrow">Launch pricing hypothesis</p>
+      <p class="eyebrow">Live monthly plans</p>
       <h2>Simple pricing for small teams.</h2>
       <div class="pricing">
         <article><span>Free Check</span><strong>$0</strong><p>Passive website security check and next-step guidance.</p><a class="button secondary" href="#free-check">Start free</a></article>
-        <article class="featured"><span>Business</span><strong>$79<small>/mo</small></strong><p>Continuous monitoring, prioritized findings, remediation guidance, and verification.</p><a class="button primary" href="#contact">Choose Business</a></article>
-        <article><span>Pro</span><strong>$149<small>/mo</small></strong><p>Higher-complexity sites, APIs, ecommerce, and expanded monitoring cadence.</p><a class="button secondary" href="#contact">Ask about Pro</a></article>
+        <article class="featured"><span>Business</span><strong>$79<small>/mo</small></strong><p>Continuous monitoring, prioritized findings, remediation guidance, and verification.</p><a class="button primary" href="https://buy.stripe.com/7sY5kFb1d5uU3IKeGQ2Ry01">Subscribe to Business</a></article>
+        <article><span>Pro</span><strong>$149<small>/mo</small></strong><p>Higher-complexity sites, APIs, ecommerce, and expanded monitoring cadence.</p><a class="button secondary" href="https://buy.stripe.com/14A7sN5GT7D22EG8is2Ry02">Subscribe to Pro</a></article>
       </div>
-      <p class="fineprint">Pricing shown here is a launch hypothesis, not a permanent offer or service guarantee.</p>
+      <p class="fineprint">Business and Pro are recurring monthly subscriptions processed by Stripe. Purchase does not authorize active security testing; verified ownership, exact scope, and explicit scan authorization remain separate requirements. Review the <a href="terms.html">subscription terms</a> before purchase. Questions can still be sent through the contact form below.</p>
     </section>
 
     <section class="section form-section" id="contact">
       <div class="form-intro">
-        <p class="eyebrow">Business, Pro, and agency interest</p>
+        <p class="eyebrow">Questions, agency, and service requests</p>
         <h2>Tell us what you need monitored.</h2>
-        <p>Use this form for paid-plan or agency interest. No subscription or active scan is created by submitting it.</p>
+        <p>Use this form for plan questions, agency interest, cancellation/refund requests, or service questions. Submitting this form does not authorize active scanning.</p>
       </div>
       <form class="site-form" name="product-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html">
         <input type="hidden" name="form-name" value="product-interest">
         <p class="visually-hidden"><label>Leave this field empty <input name="bot-field" autocomplete="off"></label></p>
         <label for="interest-type">I am interested in</label>
         <select id="interest-type" name="interest" required>
-          <option value="">Select one</option><option>Business</option><option>Pro</option><option>Agency / multi-site</option><option>One-time assessment</option>
+          <option value="">Select one</option><option>Business</option><option>Pro</option><option>Agency / multi-site</option><option>One-time assessment</option><option>Billing / cancellation / refund question</option>
         </select>
         <label for="business-email">Contact email</label>
         <input id="business-email" name="contact-email" type="email" placeholder="you@example.com" required autocomplete="email">
         <label for="business-site">Primary website <span class="optional">Optional</span></label>
         <input id="business-site" name="website-url" type="url" placeholder="https://example.com" autocomplete="url">
         <label for="business-notes">What do you need?</label>
-        <textarea id="business-notes" name="notes" rows="4" placeholder="Number of sites, platform, or what you want SiteShield to handle"></textarea>
+        <textarea id="business-notes" name="notes" rows="4" placeholder="Number of sites, platform, billing question, or what you want SiteShield to handle"></textarea>
         <button class="button primary" type="submit">Send my request</button>
       </form>
     </section>
@@ -125,7 +125,7 @@
   <footer>
     <span>Seraph SiteShield</span>
     <span>Evidence-grounded website security monitoring</span>
-    <nav aria-label="Footer navigation"><a href="privacy.html">Privacy</a><a href="security-methodology.html">Methodology</a><a href="#contact">Contact</a></nav>
+    <nav aria-label="Footer navigation"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="security-methodology.html">Methodology</a><a href="#contact">Contact</a></nav>
   </footer>
 </body>
 </html>
