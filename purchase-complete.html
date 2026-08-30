@@ -15,16 +15,17 @@
     <section class="hero">
       <p class="eyebrow">Subscription onboarding</p>
       <h1>Let’s secure the right website.</h1>
-      <p class="lede">Stripe sent you here after checkout. Service activation begins after the successful subscription is confirmed in Stripe and we receive the website details below.</p>
+      <p class="lede">Service activation begins after the successful subscription is matched to this onboarding request and the website’s authorization requirements are satisfied.</p>
       <p class="boundary">Payment does not authorize active testing. Active testing still requires verified ownership, exact scope, and explicit authorization.</p>
     </section>
     <section class="section form-section">
       <div class="form-intro">
         <p class="eyebrow">Next step</p>
         <h2>Tell us what to monitor.</h2>
-        <p>Use the same email address you used at checkout when possible so we can match your onboarding request to the Stripe subscription.</p>
+        <p>Use the same email address you used at checkout when possible so the subscription and onboarding request can be reconciled accurately.</p>
         <p class="fineprint">Do not submit passwords, API keys, customer records, or other secrets.</p>
-      </div>      <form class="site-form" name="paid-onboarding" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html">
+      </div>
+      <form class="site-form" name="paid-onboarding" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="paid-thanks.html">
         <input type="hidden" name="form-name" value="paid-onboarding">
         <p class="visually-hidden"><label>Leave this field empty <input name="bot-field" autocomplete="off"></label></p>
         <label for="onboard-business">Business name</label>
@@ -38,7 +39,7 @@
         <label for="onboard-notes">Anything we should know? <span class="optional">Optional</span></label>
         <textarea id="onboard-notes" name="notes" rows="4" placeholder="CMS, ecommerce platform, recent changes, or priorities"></textarea>
         <label class="check-row"><input type="checkbox" name="authorized-onboarding" value="yes" required><span>I own, manage, or am authorized to enroll this website in SiteShield monitoring.</span></label>
-        <button class="button primary" type="submit">Start my onboarding</button>
+        <button class="button primary" type="submit">Submit paid onboarding</button>
       </form>
     </section>
   </main>
