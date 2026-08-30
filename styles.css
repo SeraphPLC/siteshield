@@ -71,3 +71,8 @@ footer a { color:var(--accent); }
   footer { flex-direction:column; align-items:flex-start; justify-content:center; padding:2rem 0; }
   footer nav { flex-wrap:wrap; }
 }
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  .button,.proof-card,.panel-link { transition:none; }
+  .button:hover,.proof-card:hover,.panel-link:hover { transform:none; }
+}
