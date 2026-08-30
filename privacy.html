@@ -5,25 +5,40 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="description" content="Seraph SiteShield privacy and data-boundary summary.">
+  <meta name="description" content="Seraph SiteShield privacy and data-handling summary.">
   <title>Privacy — Seraph SiteShield</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="nav"><a class="brand" href="./">SERAPH <span>SITESHIELD</span></a><nav><a href="./">Home</a><a href="security-methodology.html">Methodology</a></nav></header>
+  <header class="nav"><a class="brand" href="./">SERAPH <span>SITESHIELD</span></a><nav><a href="./">Home</a><a href="security-methodology.html">Methodology</a><a href="terms.html">Terms</a></nav></header>
   <main>
     <section class="hero">
       <p class="eyebrow">Privacy</p>
       <h1>Collect less. Keep evidence explicit.</h1>
-      <p class="lede">SiteShield uses hosted providers for website intake and subscription checkout while keeping production credentials, raw card data, and unrestricted active scanning out of the public site.</p>
+      <p class="lede">SiteShield limits public intake to information needed to provide, support, and secure the service. Payment details stay with the payment processor rather than the public website.</p>
     </section>
     <section class="section">
-      <h2>Current data boundary</h2>
-      <p>The public intake forms accept only the website URL, contact email, selected service interest, and optional notes that you choose to submit. Do not submit passwords, API keys, customer records, or other secrets. SiteShield self-monitoring remains bounded to its own explicitly authorized scope.</p>
-      <p>Form submissions are processed by our hosting provider for intake and follow-up. Subscription checkout is processed by Stripe; SiteShield does not receive or store full card numbers or card security codes. Payment does not authorize active testing.</p>
-      <p>Submitting a form or purchasing a subscription does not authorize credential use, exploitation, state changes, or access to non-public systems. Additional production-data handling requires a separate documented agreement.</p>
+      <h2>Information you submit</h2>
+      <p>Public forms may collect a website URL, contact email, business name, selected service or plan, authorization confirmation, and notes you choose to provide. Do not submit passwords, API keys, customer records, private keys, or other secrets.</p>
+      <p>SiteShield uses form information to respond to requests, reconcile paid onboarding, verify scope and authorization, provide monitoring and support, investigate service or security issues, and maintain necessary business records.</p>
+
+      <h2>Payments</h2>
+      <p>Subscription checkout is processed by Stripe. SiteShield does not receive or store full payment-card numbers or card security codes through this website. Payment does not authorize active testing of a website.</p>
+
+      <h2>Hosting and service providers</h2>
+      <p>The public site and intake forms use hosted infrastructure, including Netlify for website hosting/form handling and Stripe for subscription checkout. Those providers process data under their own privacy and security terms.</p>
+
+      <h2>Retention and deletion</h2>
+      <p>Intake, onboarding, support, billing-reference, authorization, and security-evidence records are retained only as long as reasonably needed to operate the service, resolve support or billing matters, preserve necessary security/audit history, and meet legal or accounting obligations. Records that are no longer needed are deleted or de-identified where reasonably practicable.</p>
+
+      <h2>Your requests</h2>
+      <p>You may use the <a href="./#contact">SiteShield contact form</a> to ask about personal information associated with your request, request a correction, or request deletion where applicable. We may need to verify the requester before changing or deleting records.</p>
+
+      <h2>Data boundaries</h2>
+      <p>Submitting a form or purchasing a subscription does not authorize credential use, exploitation, state changes, access to non-public systems, or active testing. Additional production-data handling or broader testing requires a separate documented scope and authorization.</p>
+      <p>SiteShield does not sell information submitted through its public intake and onboarding forms.</p>
     </section>
   </main>
-  <footer><span>Seraph SiteShield</span><span>Public prototype privacy boundary</span><a href="./">Home</a></footer>
+  <footer><span>Seraph SiteShield</span><span>Privacy and data boundaries</span><nav><a href="./">Home</a><a href="terms.html">Terms</a><a href="./#contact">Contact</a></nav></footer>
 </body>
 </html>
