@@ -78,6 +78,14 @@ LOCAL_AVAILABLE != BEST_AVAILABLE
 COUNCIL_CONSENSUS != SOURCE_EVIDENCE
 ```
 
+## Artifact Nomenclature Bridge
+
+When SiteShield work creates, exports, packages, downloads, or names a Seraph-owned durable artifact, resolve the live Core standard:
+
+`docs/canon/SERAPH_ARTIFACT_NOMENCLATURE_STANDARD_R1_2026268T202000Z.md`
+
+Use UTC ordinal/Julian-day-of-year timestamps in `YYYYDDDTHHMMSSZ` form. Provider-required fixed names are interface aliases only; the Seraph archival/export name must remain meaningful and timestamped.
+
 ## Mutation Boundary
 
 `Get Seraphed` authorizes grounding, not unrestricted mutation.
