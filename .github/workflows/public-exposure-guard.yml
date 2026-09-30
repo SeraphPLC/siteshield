@@ -1,0 +1,59 @@
+name: Public Exposure Guard
+
+on:
+  pull_request:
+    paths:
+      - '.gitignore'
+      - 'tools/exposure_scan.py'
+      - '.github/workflows/public-exposure-guard.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - '.gitignore'
+      - 'tools/exposure_scan.py'
+      - '.github/workflows/public-exposure-guard.yml'
+  schedule:
+    - cron: '41 11 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exposure-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out complete reachable history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Scan public tracked tree
+        run: |
+          python tools/exposure_scan.py \
+            --repo-root . \
+            --json-out /tmp/siteshield_exposure_current.json
+
+      - name: Scan public Git history
+        run: |
+          python tools/exposure_scan.py \
+            --repo-root . \
+            --history \
+            --json-out /tmp/siteshield_exposure_history.json
+
+      - name: Preserve redacted reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: siteshield-exposure-redacted-reports
+          path: |
+            /tmp/siteshield_exposure_current.json
+            /tmp/siteshield_exposure_history.json
+          if-no-files-found: ignore
+          retention-days: 14
