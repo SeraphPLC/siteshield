@@ -1,1 +1,24 @@
 .netlify/
+
+# Local credentials and secret-bearing files must never enter the public repo.
+.env
+.env.*
+!.env.example
+!.env.sample
+.secrets/
+secrets.local/
+.credentials/
+.auth/
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+client_secret*.json
+credentials*.json
+service-account*.json
+service_account*.json

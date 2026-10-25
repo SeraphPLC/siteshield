@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="description" content="How Seraph SiteShield separates authorization, technical evidence, interpretation, remediation, and verification.">
+  <meta name="description" content="How Seraph SiteShield separates authorization, technical evidence, interpretation, remediation, monitoring cadence, and verification.">
   <title>Security Methodology — Seraph SiteShield</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="nav"><a class="brand" href="./">SERAPH <span>SITESHIELD</span></a><nav><a href="./">Home</a><a href="privacy.html">Privacy</a></nav></header>
+  <header class="nav"><a class="brand" href="./">SERAPH <span>SITESHIELD</span></a><nav><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></header>
   <main>
     <section class="hero">
       <p class="eyebrow">Security methodology</p>
       <h1>Evidence before conclusions.</h1>
-      <p class="lede">SiteShield is designed around explicit authorization, bounded observation, preserved evidence lineage, and deterministic verification.</p>
+      <p class="lede">SiteShield is designed around explicit authorization, bounded observation, preserved evidence lineage, scheduled monitoring, and deterministic verification.</p>
     </section>
     <section class="section" id="authorization">
       <h2>Authorization is a gate, not a suggestion.</h2>
@@ -35,6 +35,13 @@
         <p>Disagreement remains visible</p>
       </div>
     </section>
+    <section class="section" id="cadence">
+      <p class="eyebrow">Monitoring cadence</p>
+      <h2>A paid plan has a defined minimum rhythm.</h2>
+      <p><strong>Business</strong> performs scheduled passive monitoring of the activated public website at least once every 7 days. <strong>Pro</strong> performs scheduled passive monitoring at least once every 24 hours and may include additional authorized website, API, or ecommerce surfaces agreed during onboarding.</p>
+      <p>Reported fixes or material changes can trigger an earlier manual or event-driven recheck. Active testing never inherits authority from the clock: every active check still requires the exact site's ownership, scope, and authorization gates to be satisfied.</p>
+      <p>If a safe check cannot be performed because the site, scope, or authorization state has changed, the affected check is paused rather than silently expanding scope.</p>
+    </section>
     <section class="section" id="lifecycle">
       <p class="eyebrow">Finding lifecycle</p>
       <h2>Open is not resolved until verification says so.</h2>
@@ -47,6 +54,6 @@
       <p>The SiteShield public surface is monitored within an explicitly authorized scope so deployment changes can be observed and rechecked. Self-assessment is not independent validation.</p>
     </section>
   </main>
-  <footer><span>Seraph SiteShield</span><span>Security methodology</span><a href="./">Home</a></footer>
+  <footer><span>Seraph SiteShield</span><span>Security methodology</span><nav><a href="./">Home</a><a href="terms.html">Terms</a></nav></footer>
 </body>
 </html>
