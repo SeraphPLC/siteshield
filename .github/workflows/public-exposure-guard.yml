@@ -1,18 +1,12 @@
 name: Public Exposure Guard
 
+# Scan EVERY proposed content change, not only changes to guard files.
+# This catches new secret-bearing files before they reach the default branch.
 on:
   pull_request:
-    paths:
-      - '.gitignore'
-      - 'tools/exposure_scan.py'
-      - '.github/workflows/public-exposure-guard.yml'
   push:
     branches:
       - main
-    paths:
-      - '.gitignore'
-      - 'tools/exposure_scan.py'
-      - '.github/workflows/public-exposure-guard.yml'
   schedule:
     - cron: '41 11 * * 1'
   workflow_dispatch:
